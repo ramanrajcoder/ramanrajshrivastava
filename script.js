@@ -1,51 +1,32 @@
-/* ═══════════════════════════════════════════════
-   PORTFOLIO JS — Raman Raj Shrivastava
-════════════════════════════════════════════════ */
+/* =============================================
+   RAMAN RAJ SHRIVASTAVA — PORTFOLIO SCRIPTS
+   ============================================= */
 
-// ─── CUSTOM CURSOR ───
-const dot = document.querySelector('.cursor-dot');
-const ring = document.querySelector('.cursor-ring');
-
-if (dot && ring) {
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX; mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  document.querySelectorAll('a, button, .project-card, .service-card, .blog-card, .filter-btn').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
-  });
-}
-
-// ─── NAVBAR SCROLL ───
+/* =============================================
+   1. NAVBAR — Scroll Effect & Active State
+   ============================================= */
 const navbar = document.getElementById('navbar');
+
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
+  if (window.scrollY > 60) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
 });
 
-// ─── HAMBURGER MENU ───
+/* =============================================
+   2. HAMBURGER MENU — Mobile Toggle
+   ============================================= */
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+const navLinks  = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
 });
 
+// Close menu when a link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -53,188 +34,185 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// ─── THEME TOGGLE ───
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-const html = document.documentElement;
-
-const savedTheme = localStorage.getItem('theme') || 'dark';
-html.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-  updateThemeIcon(next);
-});
-
-function updateThemeIcon(theme) {
-  themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-}
-
-// ─── TYPED TEXT EFFECT ───
-const typedEl = document.getElementById('typedText');
-const phrases = [
-  'Web Experiences.',
-  'Business Solutions.',
-  'AI-Powered Apps.',
-  'Startup MVPs.',
-  'Digital Products.',
-];
-let pIdx = 0, cIdx = 0, deleting = false;
-const typingSpeed = 90, deletingSpeed = 50, pauseTime = 2200;
-
-function typeWriter() {
-  const current = phrases[pIdx];
-  if (!deleting) {
-    typedEl.textContent = current.substring(0, cIdx + 1);
-    cIdx++;
-    if (cIdx === current.length) {
-      deleting = true;
-      setTimeout(typeWriter, pauseTime);
-      return;
-    }
-  } else {
-    typedEl.textContent = current.substring(0, cIdx - 1);
-    cIdx--;
-    if (cIdx === 0) {
-      deleting = false;
-      pIdx = (pIdx + 1) % phrases.length;
-    }
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!navbar.contains(e.target)) {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
   }
-  setTimeout(typeWriter, deleting ? deletingSpeed : typingSpeed);
-}
-typeWriter();
-
-// ─── SCROLL REVEAL ───
-const revealEls = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, 80 * (entry.target.dataset.delay || 0));
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-// Stagger siblings
-document.querySelectorAll('.skills-grid .skill-card, .projects-grid .project-card, .services-grid .service-card, .blog-grid .blog-card').forEach((el, i) => {
-  el.dataset.delay = i;
 });
-document.querySelectorAll('.timeline-item').forEach((el, i) => { el.dataset.delay = i; });
 
-revealEls.forEach(el => revealObserver.observe(el));
-
-// ─── SKILL BARS ───
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.skill-fill').forEach(fill => {
-        fill.style.width = fill.dataset.width + '%';
-      });
-      skillObserver.unobserve(entry.target);
+/* =============================================
+   3. SMOOTH SCROLL — All anchor links
+   ============================================= */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 80; // Height of fixed navbar
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   });
-}, { threshold: 0.3 });
+});
 
-document.querySelectorAll('.skill-card').forEach(card => skillObserver.observe(card));
+/* =============================================
+   4. SCROLL REVEAL — Animate elements on scroll
+   ============================================= */
+const revealElements = document.querySelectorAll('.reveal');
 
-// ─── PROJECT FILTER ───
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Stagger animations for sibling elements
+        const siblings = entry.target.parentElement.querySelectorAll('.reveal');
+        let delay = 0;
+        siblings.forEach((el, i) => {
+          if (el === entry.target) delay = i * 120;
+        });
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    projectCards.forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
-        card.classList.remove('hidden');
-        card.style.animation = 'fadeInUp 0.4s ease forwards';
-      } else {
-        card.classList.add('hidden');
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+
+        revealObserver.unobserve(entry.target);
       }
     });
+  },
+  {
+    threshold: 0.12,
+    rootMargin: '0px 0px -50px 0px'
+  }
+);
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+/* =============================================
+   5. ACTIVE NAV LINK — Highlight current section
+   ============================================= */
+const sections   = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navAnchors.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  },
+  {
+    rootMargin: '-40% 0px -50% 0px'
+  }
+);
+
+sections.forEach(sec => sectionObserver.observe(sec));
+
+/* =============================================
+   6. TYPING EFFECT — Hero subtitle (optional)
+   ============================================= */
+function typeWriter(element, texts, speed = 80, pause = 2000) {
+  let textIndex = 0;
+  let charIndex  = 0;
+  let isDeleting = false;
+
+  function type() {
+    const current = texts[textIndex];
+    if (isDeleting) {
+      element.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+    } else {
+      element.textContent = current.slice(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let delay = isDeleting ? speed / 2 : speed;
+
+    if (!isDeleting && charIndex === current.length) {
+      delay = pause;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex  = (textIndex + 1) % texts.length;
+      delay      = 400;
+    }
+
+    setTimeout(type, delay);
+  }
+
+  type();
+}
+
+/* =============================================
+   7. PROJECT CARD — Tilt Effect on Hover
+   ============================================= */
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect   = card.getBoundingClientRect();
+    const x      = e.clientX - rect.left;
+    const y      = e.clientY - rect.top;
+    const cx     = rect.width  / 2;
+    const cy     = rect.height / 2;
+    const rotateX = ((y - cy) / cy) * -5;
+    const rotateY = ((x - cx) / cx) *  5;
+
+    card.style.transform = `
+      translateY(-8px)
+      perspective(600px)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+    `;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.style.transition = 'transform 0.5s ease';
+    setTimeout(() => { card.style.transition = ''; }, 500);
   });
 });
 
-// ─── CONTACT FORM ───
-const form = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
+/* =============================================
+   8. YEAR — Auto-update footer year
+   ============================================= */
+const yearEl = document.querySelector('.footer-year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
-  setTimeout(() => {
-    btn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
-    formSuccess.classList.add('show');
-    form.reset();
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
-    }, 3500);
-  }, 1500);
+/* =============================================
+   9. PROGRESS BAR — Reading indicator at top
+   ============================================= */
+const progressBar = document.createElement('div');
+progressBar.id = 'progress-bar';
+Object.assign(progressBar.style, {
+  position:   'fixed',
+  top:        '0',
+  left:       '0',
+  height:     '2px',
+  width:      '0%',
+  background: 'linear-gradient(90deg, #f5c842, #4fd1c5)',
+  zIndex:     '9999',
+  transition: 'width 0.1s linear',
 });
-
-// ─── SMOOTH ACTIVE NAV LINK ───
-const sections = document.querySelectorAll('section[id]');
-const navLinksList = document.querySelectorAll('.nav-links a');
+document.body.prepend(progressBar);
 
 window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 140) current = sec.getAttribute('id');
-  });
-  navLinksList.forEach(link => {
-    link.style.color = link.getAttribute('href') === '#' + current
-      ? 'var(--text-primary)'
-      : '';
-  });
+  const scrollTop  = window.scrollY;
+  const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+  const progress   = (scrollTop / docHeight) * 100;
+  progressBar.style.width = `${Math.min(progress, 100)}%`;
 });
 
-// ─── HERO ORB PARALLAX ───
-const orb1 = document.querySelector('.hero-orb-1');
-const orb2 = document.querySelector('.hero-orb-2');
-window.addEventListener('mousemove', (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 30;
-  const y = (e.clientY / window.innerHeight - 0.5) * 20;
-  if (orb1) orb1.style.transform = `translate(${x}px, ${y}px)`;
-  if (orb2) orb2.style.transform = `translate(${-x * 0.6}px, ${-y * 0.6}px)`;
-});
-
-// ─── COUNTER ANIMATION ───
-const statNums = document.querySelectorAll('.stat-num');
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const target = parseInt(el.textContent);
-      const suffix = el.textContent.replace(target.toString(), '');
-      let count = 0;
-      const step = Math.ceil(target / 40);
-      const timer = setInterval(() => {
-        count = Math.min(count + step, target);
-        el.textContent = count + suffix;
-        if (count >= target) clearInterval(timer);
-      }, 40);
-      counterObserver.unobserve(el);
-    }
-  });
-}, { threshold: 0.8 });
-statNums.forEach(el => counterObserver.observe(el));
-
-// ─── CSS ANIMATION KEYFRAME ───
-const style = document.createElement('style');
-style.textContent = `
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(15px); }
-  to   { opacity: 1; transform: translateY(0); }
-}`;
-document.head.appendChild(style);
+/* =============================================
+   10. CONSOLE EASTER EGG
+   ============================================= */
+console.log(
+  '%c👋 Hey there, developer!',
+  'color: #f5c842; font-size: 18px; font-weight: bold;'
+);
+console.log(
+  '%cThis portfolio was built by Raman Raj Shrivastava.\nCheck out my GitHub: https://github.com/ramanrajcoder',
+  'color: #4fd1c5; font-size: 13px;'
+);

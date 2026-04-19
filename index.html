@@ -1,589 +1,324 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Raman Raj Shrivastava — Aspiring Entrepreneur, Web Developer & Business Enthusiast. Building ideas that matter." />
-  <meta name="keywords" content="Raman Raj Shrivastava, web developer, entrepreneur, freelancer, startup, AI, business analytics" />
-  <title>Raman Raj Shrivastava | Entrepreneur & Web Developer</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+  <title>Raman Raj Shrivastava | CSE Student & Developer</title>
+  <meta name="description" content="Portfolio of Raman Raj Shrivastava – CSE Student, Aspiring Entrepreneur, Web Developer." />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ─── CURSOR ─── -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-ring"></div>
-
-  <!-- ─── NOISE OVERLAY ─── -->
-  <div class="noise-overlay"></div>
-
-  <!-- ─── NAVBAR ─── -->
-  <nav class="navbar" id="navbar">
-    <a href="#home" class="nav-logo">RRS<span class="dot">.</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#blog">Insights</a></li>
-      <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <i class="fas fa-sun" id="themeIcon"></i>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">RRS<span class="logo-dot">.</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#extras">Activities</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- ─── HERO ─── -->
-  <section class="hero" id="home">
+  <!-- ========== HERO ========== -->
+  <section id="hero">
     <div class="hero-bg-grid"></div>
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
     <div class="hero-content">
-      <div class="hero-badge reveal">Available for Freelance &amp; Collaboration</div>
-      <h1 class="hero-name reveal">
-        <span class="line">Raman Raj</span>
-        <span class="line accent-line">Shrivastava</span>
+      <div class="hero-badge animate-fade-up delay-1">
+        <span class="badge-dot"></span>
+        Available for Internships & Collaborations
+      </div>
+
+      <h1 class="hero-title animate-fade-up delay-2">
+        Raman Raj<br />
+        <span class="highlight">Shrivastava</span>
       </h1>
-      <div class="hero-role reveal">
-        <span class="static-text">I build </span>
-        <span class="typed-text" id="typedText"></span>
-        <span class="cursor-blink">|</span>
-      </div>
-      <p class="hero-tagline reveal">
-        Turning ideas into impactful products — where entrepreneurship <br class="br-hide" />
-        meets engineering and business meets design.
+
+      <p class="hero-role animate-fade-up delay-3">
+        CSE Student &nbsp;·&nbsp; Aspiring Entrepreneur &nbsp;·&nbsp; Web Developer
       </p>
-      <div class="hero-actions reveal">
-        <a href="#projects" class="btn btn-primary">
-          <span>View Projects</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="#contact" class="btn btn-ghost">Contact Me</a>
-        <a href="#" class="btn btn-ghost btn-resume" download>
-          <i class="fas fa-download"></i> Resume
-        </a>
+
+      <p class="hero-desc animate-fade-up delay-4">
+        Building real-world solutions through code and creative thinking. 
+        From logistics systems to live web apps — I turn ideas into impact.
+      </p>
+
+      <div class="hero-actions animate-fade-up delay-5">
+        <a href="#projects" class="btn btn-primary">Explore My Work ↓</a>
+        <a href="mailto:ramanrajshrivastava@gmail.com" class="btn btn-secondary">Say Hello ✉</a>
       </div>
-      <div class="hero-stats reveal">
-        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects Built</span></div>
+
+      <div class="hero-stats animate-fade-up delay-6">
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Live Projects</span>
+        </div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Clients Served</span></div>
+        <div class="stat">
+          <span class="stat-number">6<small>mo</small></span>
+          <span class="stat-label">Work Experience</span>
+        </div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years Learning</span></div>
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Languages Spoken</span>
+        </div>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
+
+    <div class="scroll-hint animate-fade-up delay-6">
       <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
     </div>
   </section>
 
-  <!-- ─── MARQUEE ─── -->
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>Web Development</span><span class="sep">✦</span>
-      <span>Entrepreneurship</span><span class="sep">✦</span>
-      <span>AI Solutions</span><span class="sep">✦</span>
-      <span>Business Analytics</span><span class="sep">✦</span>
-      <span>Freelancing</span><span class="sep">✦</span>
-      <span>Startup Mindset</span><span class="sep">✦</span>
-      <span>Problem Solving</span><span class="sep">✦</span>
-      <span>Web Development</span><span class="sep">✦</span>
-      <span>Entrepreneurship</span><span class="sep">✦</span>
-      <span>AI Solutions</span><span class="sep">✦</span>
-      <span>Business Analytics</span><span class="sep">✦</span>
-      <span>Freelancing</span><span class="sep">✦</span>
-      <span>Startup Mindset</span><span class="sep">✦</span>
-      <span>Problem Solving</span><span class="sep">✦</span>
-    </div>
-  </div>
-
-  <!-- ─── ABOUT ─── -->
-  <section class="section" id="about">
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
     <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Who I Am</p>
+        <h2 class="section-title">A Developer with an<br /><em>Entrepreneur's Mind</em></h2>
+        <div class="section-line"></div>
+      </div>
+
       <div class="about-grid">
-        <div class="about-image-col reveal">
-          <div class="about-img-wrapper">
-            <div class="about-img-placeholder">
-              <span class="initials">RRS</span>
-              <div class="img-ring img-ring-1"></div>
-              <div class="img-ring img-ring-2"></div>
-            </div>
-            <div class="about-card-float">
-              <i class="fas fa-rocket"></i>
-              <div>
-                <strong>Builder Mindset</strong>
-                <span>Always shipping</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-text-col">
-          <p class="section-eyebrow reveal">About Me</p>
-          <h2 class="section-title reveal">I'm a builder who thinks <br /><span class="highlight">like a businessman</span></h2>
-          <p class="about-body reveal">
-            Hey! I'm Raman — a passionate web developer, aspiring entrepreneur, and business enthusiast from India. I blend technical depth with business acumen to create digital products that don't just work beautifully, but solve real problems and create real value.
+        <div class="about-text reveal">
+          <p>
+            I'm a first-year B.Tech Computer Science student at 
+            <strong>K.R. Mangalam University</strong> (Batch 2025–2029), 
+            with a strong passion for building things that matter.
           </p>
-          <p class="about-body reveal">
-            My journey started with curiosity — taking apart how things worked, then figuring out how to build them better. Today, I channel that energy into building web applications, exploring AI-driven solutions, and working with startups and founders who want to turn their vision into reality.
+          <p>
+            What sets me apart? I combine <strong>technical skills</strong> with 
+            <strong>hands-on business experience</strong> — from managing real 
+            warehouse operations to shipping live web apps. I understand both 
+            the code and the customer.
           </p>
-          <div class="about-values reveal">
-            <div class="value-pill"><i class="fas fa-brain"></i> AI & Innovation</div>
-            <div class="value-pill"><i class="fas fa-chart-line"></i> Business Growth</div>
-            <div class="value-pill"><i class="fas fa-code"></i> Clean Code</div>
-            <div class="value-pill"><i class="fas fa-lightbulb"></i> Startup Culture</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SKILLS ─── -->
-  <section class="section section-alt" id="skills">
-    <div class="container">
-      <p class="section-eyebrow text-center reveal">Capabilities</p>
-      <h2 class="section-title text-center reveal">What I Bring <span class="highlight">to the Table</span></h2>
-
-      <div class="skills-grid">
-        <!-- Technical -->
-        <div class="skill-card reveal">
-          <div class="skill-card-header">
-            <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-            <h3>Technical Skills</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item"><span>HTML / CSS / JavaScript</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-            <div class="skill-item"><span>React.js</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
-            <div class="skill-item"><span>Node.js / Express</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
-            <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
-            <div class="skill-item"><span>SQL / MongoDB</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
-            <div class="skill-item"><span>UI/UX Design</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
-          </div>
-        </div>
-        <!-- Business -->
-        <div class="skill-card reveal">
-          <div class="skill-card-header">
-            <div class="skill-icon"><i class="fas fa-briefcase"></i></div>
-            <h3>Business Skills</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item"><span>Business Strategy</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
-            <div class="skill-item"><span>Market Research</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
-            <div class="skill-item"><span>Data Analytics</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
-            <div class="skill-item"><span>Product Management</span><div class="skill-bar"><div class="skill-fill" data-width="68"></div></div></div>
-            <div class="skill-item"><span>Freelance / Client Mgmt</span><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
-            <div class="skill-item"><span>Startup Ecosystems</span><div class="skill-bar"><div class="skill-fill" data-width="77"></div></div></div>
-          </div>
-        </div>
-        <!-- Soft -->
-        <div class="skill-card reveal">
-          <div class="skill-card-header">
-            <div class="skill-icon"><i class="fas fa-users"></i></div>
-            <h3>Soft Skills</h3>
-          </div>
-          <div class="soft-skills-wrap">
-            <span class="soft-tag">Problem Solving</span>
-            <span class="soft-tag">Critical Thinking</span>
-            <span class="soft-tag">Communication</span>
-            <span class="soft-tag">Leadership</span>
-            <span class="soft-tag">Adaptability</span>
-            <span class="soft-tag">Time Management</span>
-            <span class="soft-tag">Self-Driven</span>
-            <span class="soft-tag">Team Collaboration</span>
-            <span class="soft-tag">Negotiation</span>
-            <span class="soft-tag">Creative Thinking</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PROJECTS ─── -->
-  <section class="section" id="projects">
-    <div class="container">
-      <p class="section-eyebrow text-center reveal">Portfolio</p>
-      <h2 class="section-title text-center reveal">Featured <span class="highlight">Projects</span></h2>
-
-      <div class="filter-bar reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ai">AI / Tech</button>
-        <button class="filter-btn" data-filter="web">Web Dev</button>
-        <button class="filter-btn" data-filter="business">Business</button>
-      </div>
-
-      <div class="projects-grid" id="projectsGrid">
-        <!-- Project 1 -->
-        <div class="project-card reveal" data-category="ai">
-          <div class="project-tag">AI / EdTech</div>
-          <h3 class="project-title">Brainy Buddy</h3>
-          <p class="project-desc">An AI-powered student learning platform that personalises study material, quizzes, and roadmaps based on the student's learning pace and goals.</p>
-          <div class="project-problem"><i class="fas fa-crosshairs"></i> Students lack personalised, adaptive learning paths.</div>
-          <div class="project-outcome"><i class="fas fa-chart-bar"></i> Improved retention by 40% in pilot testing with 50+ students.</div>
-          <div class="project-tech">
-            <span>React</span><span>Python</span><span>OpenAI API</span><span>MongoDB</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="btn-sm btn-primary-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#" class="btn-sm btn-ghost-sm"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card reveal" data-category="ai">
-          <div class="project-tag project-tag-green">IoT / Health</div>
-          <h3 class="project-title">Smart Medical Box</h3>
-          <p class="project-desc">An IoT-enabled medicine dispenser with automated reminders, missed-dose alerts, and caregiver notifications via SMS and app.</p>
-          <div class="project-problem"><i class="fas fa-crosshairs"></i> Medication non-adherence causes 125,000+ deaths annually in the US alone.</div>
-          <div class="project-outcome"><i class="fas fa-chart-bar"></i> 90% adherence rate achieved in elderly user testing group.</div>
-          <div class="project-tech">
-            <span>Arduino</span><span>Python</span><span>Firebase</span><span>Twilio</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="btn-sm btn-primary-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#" class="btn-sm btn-ghost-sm"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card reveal" data-category="web">
-          <div class="project-tag project-tag-orange">Web Dev</div>
-          <h3 class="project-title">Startup Landing Pages</h3>
-          <p class="project-desc">A series of high-converting landing pages for early-stage startups — optimised for speed, SEO, and lead generation with clear CTAs.</p>
-          <div class="project-problem"><i class="fas fa-crosshairs"></i> Startups losing leads due to poor first impressions online.</div>
-          <div class="project-outcome"><i class="fas fa-chart-bar"></i> Average 3× improvement in conversion rates for clients.</div>
-          <div class="project-tech">
-            <span>HTML/CSS</span><span>JavaScript</span><span>Figma</span><span>Vercel</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="btn-sm btn-primary-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#" class="btn-sm btn-ghost-sm"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card reveal" data-category="business">
-          <div class="project-tag project-tag-purple">Business</div>
-          <h3 class="project-title">Market Research Dashboard</h3>
-          <p class="project-desc">A data visualisation tool for small businesses to track competitor pricing, customer sentiment, and market trends in real-time.</p>
-          <div class="project-problem"><i class="fas fa-crosshairs"></i> SMEs lack affordable access to structured market intelligence.</div>
-          <div class="project-outcome"><i class="fas fa-chart-bar"></i> Used by 3 businesses to make pricing decisions saving ₹2L+ annually.</div>
-          <div class="project-tech">
-            <span>Python</span><span>Pandas</span><span>Chart.js</span><span>Flask</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="btn-sm btn-primary-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#" class="btn-sm btn-ghost-sm"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card reveal" data-category="web">
-          <div class="project-tag project-tag-orange">Web Dev</div>
-          <h3 class="project-title">Portfolio & Brand Sites</h3>
-          <p class="project-desc">End-to-end personal branding websites for professionals and freelancers, from design mockups to live deployment with CMS integration.</p>
-          <div class="project-problem"><i class="fas fa-crosshairs"></i> Professionals missing opportunities due to no strong online presence.</div>
-          <div class="project-outcome"><i class="fas fa-chart-bar"></i> 5+ clients landed consulting and job offers within 30 days of launch.</div>
-          <div class="project-tech">
-            <span>React</span><span>Tailwind</span><span>Sanity CMS</span><span>Netlify</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="btn-sm btn-primary-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#" class="btn-sm btn-ghost-sm"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card reveal" data-category="ai">
-          <div class="project-tag">AI / Productivity</div>
-          <h3 class="project-title">AutoReport AI</h3>
-          <p class="project-desc">AI tool that transforms raw business data (CSV/Excel) into formatted reports and slide decks with written summaries automatically.</p>
-          <div class="project-problem"><i class="fas fa-crosshairs"></i> Analysts spend 60%+ of time on formatting, not insights.</div>
-          <div class="project-outcome"><i class="fas fa-chart-bar"></i> Reduces report generation time from 4 hours to under 10 minutes.</div>
-          <div class="project-tech">
-            <span>Python</span><span>GPT-4</span><span>Streamlit</span><span>Pandas</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="btn-sm btn-primary-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#" class="btn-sm btn-ghost-sm"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── EXPERIENCE ─── -->
-  <section class="section section-alt" id="experience">
-    <div class="container">
-      <p class="section-eyebrow text-center reveal">Journey</p>
-      <h2 class="section-title text-center reveal">Experience & <span class="highlight">Background</span></h2>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-date">2024 – Present</span>
-            <h3>Freelance Web Developer & Consultant</h3>
-            <p class="timeline-org">Self-employed</p>
-            <ul>
-              <li>Designed and developed high-converting landing pages for 5+ startups and freelancers</li>
-              <li>Provided business strategy consulting for early-stage founders</li>
-              <li>Built custom web applications using React, Node.js, and Python backends</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-date">2023</span>
-            <h3>Web Development Intern</h3>
-            <p class="timeline-org">Tech Startup (Remote)</p>
-            <ul>
-              <li>Contributed to front-end development of a SaaS dashboard product</li>
-              <li>Improved page load performance by 35% through code optimisation</li>
-              <li>Collaborated in agile sprints with cross-functional teams</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-date">2022 – 2023</span>
-            <h3>Student Entrepreneur</h3>
-            <p class="timeline-org">College Startup Cell</p>
-            <ul>
-              <li>Founded and led a student startup initiative with 15+ members</li>
-              <li>Pitched product ideas at 2 inter-college entrepreneurship summits</li>
-              <li>Conducted market research and developed MVP prototypes</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-date">2021 – Present</span>
-            <h3>B.Tech / BBA Student</h3>
-            <p class="timeline-org">University — Computer Science & Business</p>
-            <ul>
-              <li>Pursuing dual focus on engineering and business management</li>
-              <li>Active in hackathons, case competitions, and coding events</li>
-              <li>Completed 10+ certifications in web dev, AI, and business analytics</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SERVICES ─── -->
-  <section class="section" id="services">
-    <div class="container">
-      <p class="section-eyebrow text-center reveal">What I Offer</p>
-      <h2 class="section-title text-center reveal">Services Built for <span class="highlight">Results</span></h2>
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-num">01</div>
-          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-          <h3>Landing Page Design</h3>
-          <p>Conversion-focused landing pages designed to capture leads, communicate value, and build trust — fast-loading, mobile-first, and visually stunning.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Figma design mockups</li>
-            <li><i class="fas fa-check"></i> Responsive development</li>
-            <li><i class="fas fa-check"></i> SEO optimised</li>
-            <li><i class="fas fa-check"></i> Free deployment support</li>
-          </ul>
-          <a href="#contact" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card service-card-featured reveal">
-          <div class="service-badge">Most Popular</div>
-          <div class="service-num">02</div>
-          <div class="service-icon"><i class="fas fa-code"></i></div>
-          <h3>Website Development</h3>
-          <p>Full-stack websites and web apps — from brochure sites to complex platforms — built with modern tech, clean code, and scalable architecture.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> React / Node.js stack</li>
-            <li><i class="fas fa-check"></i> Database integration</li>
-            <li><i class="fas fa-check"></i> Admin dashboards</li>
-            <li><i class="fas fa-check"></i> 3 months post-launch support</li>
-          </ul>
-          <a href="#contact" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-num">03</div>
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Business Consulting</h3>
-          <p>Strategic guidance for early-stage startups and entrepreneurs — from validating ideas to go-to-market strategy, competitor analysis, and growth planning.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Business model review</li>
-            <li><i class="fas fa-check"></i> Market research reports</li>
-            <li><i class="fas fa-check"></i> Pitch deck creation</li>
-            <li><i class="fas fa-check"></i> 1-on-1 strategy sessions</li>
-          </ul>
-          <a href="#contact" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── BLOG / INSIGHTS ─── -->
-  <section class="section section-alt" id="blog">
-    <div class="container">
-      <p class="section-eyebrow text-center reveal">Thinking Out Loud</p>
-      <h2 class="section-title text-center reveal">Insights & <span class="highlight">Articles</span></h2>
-      <div class="blog-grid">
-        <div class="blog-card blog-card-featured reveal">
-          <div class="blog-tag">Startups</div>
-          <h3>Why Most Student Startups Fail Before They Even Begin</h3>
-          <p>The real reason isn't lack of money — it's lack of clarity. Here's what I've seen and what to do differently.</p>
-          <div class="blog-meta"><span><i class="far fa-clock"></i> 5 min read</span><span>Coming Soon</span></div>
-        </div>
-        <div class="blog-card reveal">
-          <div class="blog-tag blog-tag-blue">AI & Business</div>
-          <h3>How Small Businesses Can Use AI Without Hiring a Data Scientist</h3>
-          <p>Practical tools and approaches that give you the power of AI without the complexity or cost.</p>
-          <div class="blog-meta"><span><i class="far fa-clock"></i> 7 min read</span><span>Coming Soon</span></div>
-        </div>
-        <div class="blog-card reveal">
-          <div class="blog-tag blog-tag-green">Freelancing</div>
-          <h3>The Freelancer's Guide to Pricing Without Underselling Yourself</h3>
-          <p>How to set rates that reflect your value, win premium clients, and build a sustainable freelance income.</p>
-          <div class="blog-meta"><span><i class="far fa-clock"></i> 6 min read</span><span>Coming Soon</span></div>
-        </div>
-      </div>
-      <div class="blog-cta-wrap reveal">
-        <a href="#" class="btn btn-ghost">Subscribe for Updates <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CONTACT ─── -->
-  <section class="section" id="contact">
-    <div class="container">
-      <p class="section-eyebrow text-center reveal">Let's Work Together</p>
-      <h2 class="section-title text-center reveal">Got a Project <span class="highlight">in Mind?</span></h2>
-      <p class="contact-intro reveal">Whether you need a website, a product built, or just want to brainstorm an idea — I'm just a message away.</p>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <p>
+            I speak <strong>English</strong>, <strong>Hindi</strong>, and <strong>Odia</strong>, 
+            and I'm always hungry for the next challenge.
+          </p>
+          <div class="about-edu">
+            <div class="edu-icon">🎓</div>
             <div>
-              <strong>Email</strong>
-              <a href="mailto:raman@example.com">raman@example.com</a>
+              <p class="edu-degree">B.Tech – Computer Science</p>
+              <p class="edu-school">K.R. Mangalam University · 2025 – 2029</p>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-            <div>
-              <strong>LinkedIn</strong>
-              <a href="#" target="_blank">linkedin.com/in/ramanrajshrivastava</a>
+        </div>
+
+        <div class="skills-panel reveal">
+          <div class="skill-group">
+            <h4 class="skill-heading">Tech Skills</h4>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Git & GitHub</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">DSA Basics</span>
+              <span class="tag">OOP</span>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-            <div>
-              <strong>Instagram</strong>
-              <a href="#" target="_blank">@ramanraj_dev</a>
+
+          <div class="skill-group">
+            <h4 class="skill-heading">Soft Skills</h4>
+            <div class="tags">
+              <span class="tag tag-accent">Communication</span>
+              <span class="tag tag-accent">Time Management</span>
+              <span class="tag tag-accent">Creativity & Innovation</span>
+              <span class="tag tag-accent">Works Under Pressure</span>
             </div>
           </div>
-          <div class="contact-availability">
-            <div class="avail-dot"></div>
-            <span>Currently available for new projects</span>
+
+          <div class="skill-group">
+            <h4 class="skill-heading">Certification</h4>
+            <div class="tags">
+              <span class="tag tag-gold">Microsoft Excel ✓</span>
+            </div>
           </div>
         </div>
-        <form class="contact-form reveal" id="contactForm">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Alex Johnson" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="alex@company.com" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">What's this about?</label>
-            <select id="subject" name="subject">
-              <option value="">Select a service...</option>
-              <option>Landing Page Design</option>
-              <option>Website Development</option>
-              <option>Business Consulting</option>
-              <option>Collaboration</option>
-              <option>Just saying hi!</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-          <div class="form-success" id="formSuccess">
-            <i class="fas fa-check-circle"></i> Thanks! I'll get back to you within 24 hours.
-          </div>
-        </form>
       </div>
     </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
-  <footer class="footer">
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#home" class="nav-logo">RRS<span class="dot">.</span></a>
-          <p>Building the future one project at a time. Available for freelance work and exciting collaborations.</p>
-          <div class="social-links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:raman@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <div class="section-header reveal">
+        <p class="section-label">My Journey</p>
+        <h2 class="section-title">Work Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-top-bar"></div>
+        <div class="exp-header">
+          <div class="exp-info">
+            <h3 class="exp-role">Warehouse & Dispatch Executive Intern</h3>
+            <p class="exp-company">Maa Ambey Transport Agency</p>
           </div>
+          <span class="exp-date">Sep 2024 – Mar 2025</span>
         </div>
-        <div class="footer-links-col">
-          <h4>Navigate</h4>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Landing Pages</a></li>
-            <li><a href="#services">Web Development</a></li>
-            <li><a href="#services">Consulting</a></li>
-            <li><a href="#contact">Hire Me</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-col">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="mailto:raman@example.com">Email</a></li>
-          </ul>
+        <ul class="exp-bullets">
+          <li>Managed end-to-end warehouse operations and coordinated daily dispatch activities with efficiency and accuracy.</li>
+          <li>Gained practical exposure to logistics pipelines, inventory management, and transport coordination in a fast-paced environment.</li>
+          <li>Developed strong organisational and communication skills while working alongside experienced logistics professionals.</li>
+        </ul>
+        <div class="exp-reference">
+          <span class="ref-label">Reference</span>
+          <span class="ref-name">Abhay Kumar Shukla</span>
+          <span class="ref-role">Proprietor, Maa Ambey Transport Agency · +91 9337009923</span>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Raman Raj Shrivastava. Crafted with passion &amp; purpose.</p>
-        <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">What I've Built</p>
+        <h2 class="section-title">Live Projects</h2>
+        <div class="section-line"></div>
       </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-emoji">📊</div>
+          <h3 class="project-name">Chitragupt</h3>
+          <p class="project-subtitle">Business Management System</p>
+          <p class="project-desc">
+            A secure web app for tracking sales, expenses, and inventory in real time. 
+            Features an intuitive financial dashboard for smarter, faster business decisions.
+          </p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://chitragupt.netlify.app" target="_blank" rel="noopener" class="project-link">
+            View Live <span class="link-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-emoji">👥</div>
+          <h3 class="project-name">FriendBook</h3>
+          <p class="project-subtitle">Personal Contact Organizer</p>
+          <p class="project-desc">
+            A client-side app to organise your connections with profiles, 
+            birthday reminders, and a full analytics dashboard — no sign-up needed.
+          </p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://friendbook.netlify.app" target="_blank" rel="noopener" class="project-link">
+            View Live <span class="link-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-emoji">🌤️</div>
+          <h3 class="project-name">Async Weather Tracker</h3>
+          <p class="project-subtitle">Real-Time Weather App</p>
+          <p class="project-desc">
+            Live weather search using real-time API calls with search history 
+            and a clean async JavaScript implementation showcasing modern JS patterns.
+          </p>
+          <div class="project-tech">
+            <span>JavaScript</span><span>Async/Await</span><span>API</span>
+          </div>
+          <a href="https://asyncweather.netlify.app" target="_blank" rel="noopener" class="project-link">
+            View Live <span class="link-arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXTRA CURRICULAR ========== -->
+  <section id="extras">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Beyond the Classroom</p>
+        <h2 class="section-title">Activities & Leadership</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-card reveal">
+          <div class="extra-icon">✍️</div>
+          <h4>Editor</h4>
+          <p>Economics Society, K.R. Mangalam University</p>
+        </div>
+        <div class="extra-card reveal">
+          <div class="extra-icon">⚡</div>
+          <h4>Volunteer</h4>
+          <p>National Level Hackathon, K.R. Mangalam University</p>
+        </div>
+        <div class="extra-card reveal">
+          <div class="extra-icon">🤖</div>
+          <h4>Volunteer</h4>
+          <p>AI Buildathon in collaboration with Replit</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box reveal">
+        <div class="contact-glow"></div>
+        <p class="section-label" style="text-align:center">Let's Talk</p>
+        <h2 class="contact-title">Got an idea or opportunity?<br /><em>Let's build something great.</em></h2>
+        <p class="contact-sub">
+          I'm always open to internships, collaborations, freelance projects, 
+          or just a good conversation about tech and entrepreneurship.
+        </p>
+        <a href="mailto:ramanrajshrivastava@gmail.com" class="btn btn-primary btn-large">
+          Send Me an Email ✉
+        </a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/raman-raj-shrivastava-499320266" target="_blank" rel="noopener" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/ramanrajcoder" target="_blank" rel="noopener" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:ramanrajshrivastava@gmail.com" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Gmail
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">RRS<span class="logo-dot">.</span></span>
+      <p>Designed & Built by Raman Raj Shrivastava · 2025</p>
+      <p class="footer-sub">K.R. Mangalam University · CSE 2025–2029</p>
     </div>
   </footer>
 
