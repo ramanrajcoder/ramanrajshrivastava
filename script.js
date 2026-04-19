@@ -1,10 +1,7 @@
-/* =============================================
-   RAMAN RAJ SHRIVASTAVA — PORTFOLIO SCRIPTS
-   ============================================= */
 
-/* =============================================
+/* 
    1. NAVBAR — Scroll Effect & Active State
-   ============================================= */
+    */
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
@@ -15,9 +12,9 @@ window.addEventListener('scroll', () => {
   }
 });
 
-/* =============================================
+/* 
    2. HAMBURGER MENU — Mobile Toggle
-   ============================================= */
+    */
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');
 
@@ -42,9 +39,9 @@ document.addEventListener('click', (e) => {
   }
 });
 
-/* =============================================
+/* 
    3. SMOOTH SCROLL — All anchor links
-   ============================================= */
+    */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
@@ -57,9 +54,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* =============================================
+/* 
    4. SCROLL REVEAL — Animate elements on scroll
-   ============================================= */
+    */
 const revealElements = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver(
@@ -89,9 +86,9 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-/* =============================================
+/*
    5. ACTIVE NAV LINK — Highlight current section
-   ============================================= */
+    */
 const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
@@ -112,9 +109,9 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach(sec => sectionObserver.observe(sec));
 
-/* =============================================
+/*
    6. TYPING EFFECT — Hero subtitle (optional)
-   ============================================= */
+    */
 function typeWriter(element, texts, speed = 80, pause = 2000) {
   let textIndex = 0;
   let charIndex  = 0;
@@ -147,9 +144,9 @@ function typeWriter(element, texts, speed = 80, pause = 2000) {
   type();
 }
 
-/* =============================================
+/* 
    7. PROJECT CARD — Tilt Effect on Hover
-   ============================================= */
+    */
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect   = card.getBoundingClientRect();
@@ -175,15 +172,15 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 
-/* =============================================
+/* 
    8. YEAR — Auto-update footer year
-   ============================================= */
+    */
 const yearEl = document.querySelector('.footer-year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-/* =============================================
+/* 
    9. PROGRESS BAR — Reading indicator at top
-   ============================================= */
+   */
 const progressBar = document.createElement('div');
 progressBar.id = 'progress-bar';
 Object.assign(progressBar.style, {
@@ -205,9 +202,9 @@ window.addEventListener('scroll', () => {
   progressBar.style.width = `${Math.min(progress, 100)}%`;
 });
 
-/* =============================================
+/* 
    10. CONSOLE EASTER EGG
-   ============================================= */
+    */
 console.log(
   '%c👋 Hey there, developer!',
   'color: #f5c842; font-size: 18px; font-weight: bold;'

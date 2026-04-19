@@ -1,11 +1,9 @@
-/* =============================================
-   RAMAN RAJ SHRIVASTAVA — PORTFOLIO STYLES
-   ============================================= */
 
-/* ----------- GOOGLE FONTS ----------- */
-/* Imported in HTML: Playfair Display + DM Sans */
+  
 
-/* ----------- CSS VARIABLES ----------- */
+
+
+/*  CSS VARIABLES  */
 :root {
   --navy:        #090e1c;
   --navy-2:      #0f1628;
@@ -37,7 +35,7 @@
   --shadow:      0 8px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* ----------- RESET & BASE ----------- */
+/*  RESET & BASE  */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -64,14 +62,14 @@ a { text-decoration: none; color: inherit; }
 
 strong { font-weight: 500; color: var(--white); }
 
-/* ----------- SCROLLBAR ----------- */
+/*  SCROLLBAR */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--navy-2); }
 ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
 
-/* =============================================
+/* 
    LAYOUT UTILITIES
-   ============================================= */
+    */
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -82,9 +80,9 @@ section {
   padding: 7rem 0;
 }
 
-/* =============================================
+/* 
    NAVIGATION
-   ============================================= */
+    */
 #navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -188,9 +186,9 @@ section {
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* =============================================
+/* 
    SECTION HEADERS (Shared)
-   ============================================= */
+  */
 .section-header { margin-bottom: 3.5rem; }
 
 .section-label {
@@ -222,9 +220,9 @@ section {
   margin-top: 1.2rem;
 }
 
-/* =============================================
+/*
    BUTTONS
-   ============================================= */
+    */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -270,9 +268,9 @@ section {
   font-size: 1.05rem;
 }
 
-/* =============================================
+/* 
    SCROLL REVEAL ANIMATION
-   ============================================= */
+    */
 .reveal {
   opacity: 0;
   transform: translateY(35px);
@@ -284,9 +282,9 @@ section {
   transform: translateY(0);
 }
 
-/* =============================================
+/* 
    HERO SECTION
-   ============================================= */
+    */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -475,9 +473,9 @@ section {
   color: var(--muted);
 }
 
-/* =============================================
+/* 
    HERO ENTRY ANIMATIONS
-   ============================================= */
+    */
 .animate-fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -495,9 +493,9 @@ section {
 .delay-5 { animation-delay: 0.7s; }
 .delay-6 { animation-delay: 0.85s; }
 
-/* =============================================
+/* 
    ABOUT SECTION
-   ============================================= */
+    */
 #about { background: var(--navy-2); }
 
 .about-grid {
@@ -598,9 +596,9 @@ section {
   color: var(--gold);
 }
 
-/* =============================================
+/* 
    EXPERIENCE SECTION
-   ============================================= */
+   */
 #experience { background: var(--navy); }
 
 .exp-card {
@@ -714,9 +712,9 @@ section {
   font-size: 0.85rem;
 }
 
-/* =============================================
+/* 
    PROJECTS SECTION
-   ============================================= */
+    */
 #projects { background: var(--navy-2); }
 
 .projects-grid {
@@ -828,9 +826,9 @@ section {
 
 .project-link:hover .link-arrow { transform: translateX(4px); }
 
-/* =============================================
+/* 
    EXTRAS SECTION
-   ============================================= */
+   */
 #extras { background: var(--navy); }
 
 .extras-grid {
@@ -873,9 +871,9 @@ section {
   line-height: 1.55;
 }
 
-/* =============================================
+/* 
    CONTACT SECTION
-   ============================================= */
+   */
 #contact { background: var(--navy-2); }
 
 .contact-box {
@@ -948,9 +946,9 @@ section {
   background: rgba(245,200,66,0.05);
 }
 
-/* =============================================
+/* 
    FOOTER
-   ============================================= */
+   */
 footer {
   background: var(--navy);
   border-top: 1px solid var(--border);
@@ -982,9 +980,9 @@ footer p {
 
 .footer-sub { font-size: 0.76rem !important; opacity: 0.6; }
 
-/* =============================================
+/*
    RESPONSIVE — TABLET
-   ============================================= */
+    */
 @media (max-width: 768px) {
   section { padding: 5rem 0; }
 
@@ -1017,9 +1015,9 @@ footer p {
   .contact-box { padding: 3rem 1.5rem; }
 }
 
-/* =============================================
+/* 
    RESPONSIVE — MOBILE
-   ============================================= */
+    */
 @media (max-width: 480px) {
   .hero-title { font-size: clamp(2.8rem, 12vw, 4rem); }
   .hero-actions { flex-direction: column; align-items: center; }
